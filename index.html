@@ -4,28 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My ePortfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" bg-blue-500 text-white", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " bg-blue-500 text-white";
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <h1>Welcome to My ePortfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-100">
+    <header class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">My ePortfolio</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About Me</a></li>
+                    <li><a href="projects.html" class="hover:underline">Projects</a></li>
+                    <li><a href="resume.html" class="hover:underline">Resume</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container mx-auto my-8 p-4 bg-white shadow-md rounded-lg">
         <section>
-            <h2>Introduction</h2>
+            <h2 class="text-2xl font-bold mb-4">Introduction</h2>
             <p>Hi, I'm [Your Name], a student of Environmental Engineering and Computer Science.</p>
         </section>
+        <section class="my-8">
+            <h2 class="text-2xl font-bold mb-4">Involvements</h2>
+            <div class="flex space-x-4 mb-4">
+                <button class="tab-link px-4 py-2 rounded bg-blue-500 text-white" onclick="openTab(event, 'Research')">Research</button>
+                <button class="tab-link px-4 py-2 rounded" onclick="openTab(event, 'Internships')">Internships</button>
+                <button class="tab-link px-4 py-2 rounded" onclick="openTab(event, 'Other')">Other Involvements</button>
+            </div>
+            <div id="Research" class="tab-content active">
+                <h3 class="text-xl font-semibold mb-2">Research Projects</h3>
+                <p>[Detail your research projects here]</p>
+            </div>
+            <div id="Internships" class="tab-content">
+                <h3 class="text-xl font-semibold mb-2">Internships</h3>
+                <p>[Detail your internships here]</p>
+            </div>
+            <div id="Other" class="tab-content">
+                <h3 class="text-xl font-semibold mb-2">Other Involvements</h3>
+                <p>[Detail your other involvements here]</p>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="bg-blue-900 text-white text-center p-4 mt-8">
         <p>&copy; 2024 [Your Name]</p>
     </footer>
 </body>
