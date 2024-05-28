@@ -18,10 +18,10 @@
             }
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" bg-blue-500 text-white", "");
+                tablinks[i].className = tablinks[i].className.replace(" bg-blue-600 text-white", "");
             }
             document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " bg-blue-500 text-white";
+            event.currentTarget.className += " bg-blue-600 text-white";
         }
     </script>
 </head>
@@ -30,25 +30,25 @@
     <!-- Navbar -->
     <header class="bg-white shadow">
         <div class="container mx-auto flex justify-between items-center p-6">
-            <h1 class="text-2xl font-bold text-blue-700">My ePortfolio</h1>
+            <h1 class="text-2xl font-bold text-blue-600">My ePortfolio</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
-                    <li><a href="about.html" class="hover:text-blue-700">About Me</a></li>
-                    <li><a href="projects.html" class="hover:text-blue-700">Projects</a></li>
-                    <li><a href="resume.html" class="hover:text-blue-700">Resume</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-700">Contact</a></li>
+                    <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="about.html" class="hover:text-blue-600">About Me</a></li>
+                    <li><a href="projects.html" class="hover:text-blue-600">Projects</a></li>
+                    <li><a href="resume.html" class="hover:text-blue-600">Resume</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-blue-700 text-white">
+    <section class="bg-blue-600 text-white">
         <div class="container mx-auto flex flex-col items-center py-20">
             <h2 class="text-4xl font-bold mb-4">Welcome to My ePortfolio</h2>
             <p class="text-xl mb-8">Showcasing my journey in Environmental Engineering and Computer Science</p>
-            <a href="about.html" class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-semibold">Learn More About Me</a>
+            <a href="about.html" class="bg-white text-blue-600 px-6 py-3 rounded-full text-lg font-semibold">Learn More About Me</a>
         </div>
     </section>
 
@@ -65,7 +65,7 @@
         <section>
             <h2 class="text-3xl font-bold mb-6">Involvements</h2>
             <div class="flex space-x-4 mb-6">
-                <button class="tab-link px-4 py-2 rounded bg-blue-500 text-white" onclick="openTab(event, 'Research')">Research</button>
+                <button class="tab-link px-4 py-2 rounded bg-blue-600 text-white" onclick="openTab(event, 'Research')">Research</button>
                 <button class="tab-link px-4 py-2 rounded" onclick="openTab(event, 'Internships')">Internships</button>
                 <button class="tab-link px-4 py-2 rounded" onclick="openTab(event, 'Other')">Other Involvements</button>
             </div>
@@ -86,7 +86,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-blue-700 text-white text-center p-6 mt-12">
+    <footer class="bg-blue-600 text-white text-center p-6 mt-12">
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
 
