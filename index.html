@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My ePortfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        #map { height: 500px; width: 100%; }
     </style>
     <script>
         function openTab(event, tabName) {
@@ -24,6 +26,7 @@
             event.currentTarget.className += " bg-blue-600 text-white";
         }
     </script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
@@ -83,12 +86,41 @@
             </div>
         </section>
 
+        <!-- Interactive Map Section -->
+        <section>
+            <h2 class="text-3xl font-bold mb-6">Interactive Map</h2>
+            <div id="map"></div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-blue-600 text-white text-center p-6 mt-12">
         <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([20, 0], 2);
+
+        // Set up the OSM layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add markers
+        var locations = [
+            { lat: 40.7128, lng: -74.0060, title: "New York City", content: "<h3>New York City</h3><p>This is where I did my internship at XYZ Company.</p><img src='nyc.jpg' alt='New York City' class='w-full rounded'>" },
+            { lat: 34.0522, lng: -118.2437, title: "Los Angeles", content: "<h3>Los Angeles</h3><p>I conducted research on environmental sustainability at ABC University.</p><img src='la.jpg' alt='Los Angeles' class='w-full rounded'>" },
+            { lat: 51.5074, lng: -0.1278, title: "London", content: "<h3>London</h3><p>I participated in a conference on green technology.</p><img src='london.jpg' alt='London' class='w-full rounded'>" }
+        ];
+
+        locations.forEach(function(location) {
+            var marker = L.marker([location.lat, location.lng]).addTo(map);
+            marker.bindPopup(location.content);
+        });
+    </script>
 
 </body>
 </html>
