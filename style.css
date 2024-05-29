@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body fills at least the entire viewport height */
 }
 
 header {
@@ -14,6 +17,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -27,13 +31,54 @@ nav ul li a {
 }
 
 main {
-    padding: 2rem;
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 1rem; /* Add padding to main to create gap */
+}
+
+#about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #map {
-    height: 500px;
-    width: 100%;
-    margin-top: 1rem;
+    height: 700px; /* Fixed height */
+    width: 49.5%; /* Subtract width of sidebar and padding */
+    transition: margin-right 0.3s ease;
+    margin-right: 1rem; /* Add margin to the right to separate from sidebar */
+    border-radius: 15px; /* Rounded edges */
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 215px; /* Adjust to line up with map */
+    right: -1000px; /* Initially hidden */
+    width: 49.5%; /* Fixed width */
+    height: 698px; /* Fixed height */
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    border-radius: 15px 0 0 15px; /* Rounded corners */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for a nicer look */
+}
+
+#sidebar.show {
+    right: 0; /* Show sidebar */
+}
+
+#sidebar-content {
+    padding: 20px;
+}
+
+#close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
 }
 
 footer {
@@ -41,7 +86,4 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
