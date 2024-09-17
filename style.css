@@ -49,18 +49,37 @@ main {
     transition: margin-right 0.3s ease;
     margin-right: 1rem; /* Add margin to the right to separate from sidebar */
     border-radius: 15px; /* Rounded edges */
+    position: relative; /* Make sure the map is positioned relatively */
+}
+
+
+/* Apply expand and contract animation */
+.leaflet-marker-icon.expandx {
+    animation: expand-contract 0.6s ease; /* Expand and contract on click */
+}
+
+@keyframes expand-contractx {
+    0% {
+        transform: scale(1); /* Start at original size */
+    }
+    50% {
+        transform: scale(1.3); /* Expand */
+    }
+    100% {
+        transform: scale(1); /* Contract back to original size */
+    }
 }
 
 
 #sidebar {
     position: fixed;
     top: 215px; /* Adjust to line up with map */
-    right: -1000px; /* Initially hidden */
+    right: -100%; /* Initially hidden */
     width: 49.5%; /* Fixed width */
     height: 698px; /* Fixed height */
     background-color: #f0f0f0;
     overflow-y: auto;
-    transition: right 0.3s ease;
+    transition: right 0.3s ease; /* Match the JS timeout */
     border-radius: 15px 0 0 15px; /* Rounded corners */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for a nicer look */
 }
@@ -68,6 +87,7 @@ main {
 #sidebar.show {
     right: 0; /* Show sidebar */
 }
+
 
 #sidebar-content {
     padding: 20px;
