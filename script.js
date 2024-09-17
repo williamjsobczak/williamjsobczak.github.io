@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
         naples: L.icon({ iconUrl: 'icons/naples.png', iconSize: [30, 30], iconAnchor: [10, 10], popupAnchor: [0, -32] }),
         gainesville: L.icon({ iconUrl: 'icons/gainesville.png', iconSize: [60,], iconAnchor: [19, 22], popupAnchor: [0, -32] }),
         tallahassee: L.icon({ iconUrl: 'icons/tallahassee.png', iconSize: [60], iconAnchor: [50, 50], popupAnchor: [0, -32] }),
-        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [60,], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-        reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [32, 32], iconAnchor: [8, 28], popupAnchor: [0, -32] }),
-        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100,], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+        reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [50, ], iconAnchor: [8, 35], popupAnchor: [0, -32] }),
+        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110, ], iconAnchor: [100, 50], popupAnchor: [0, -32] }),
         eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-        iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [48, 48], iconAnchor: [20, 40], popupAnchor: [0, -32] })
+        iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [100, 100], iconAnchor: [100, 40], popupAnchor: [0, -32] })
     };
 
     var locations = [
