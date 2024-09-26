@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
             icon: icons.naples
         },
         {
-            lat: 29.6516, 
-            lng: -82.3248, 
+            lat: 29.647423, 
+            lng: -82.353277, 
             info: `
                 <div class="location-content">
                     <h3>University of Florida<br><small><span style="font-weight: normal;">Gainesville, Florida</span></small></h3>
@@ -161,10 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
             `,
             icon: icons.gainesville
         },
-        { lat: 30.4383, lng: -84.2807, info: "Tallahassee, Florida: The capital city of Florida.", icon: icons.tallahassee },
-        { lat: 42.2808, lng: -83.7430, info: "Ann Arbor, Michigan: Known for its vibrant arts scene and the University of Michigan.", icon: icons.ann_arbor },
-        { lat: 39.5296, lng: -119.8138, info: "Reno, Nevada: The Biggest Little City in the World.", icon: icons.reno },
-        { lat: 37.5483, lng: -121.9886, info: "Fremont, California: A city in the San Francisco Bay Area.", icon: icons.fremont },
+        { lat: 30.477069, lng: -84.358069, info: "Tallahassee, Florida: The capital city of Florida.", icon: icons.tallahassee },
+        { lat: 42.3040104, lng: -83.7111609, info: "Ann Arbor, Michigan: Known for its vibrant arts scene and the University of Michigan.", icon: icons.ann_arbor },
+        { lat: 39.5411663, lng: -119.4391124, info: "Reno, Nevada: The Biggest Little City in the World.", icon: icons.reno },
+        { lat: 37.4940265, lng: -121.9452050, info: "Fremont, California: A city in the San Francisco Bay Area.", icon: icons.fremont },
         { lat: 50.6306, lng: 6.0348, info: "Eupen, Belgium: A beautiful town in the German-speaking part of Belgium.", icon: icons.eupen },
         { lat: 64.1355, lng: -21.8954, info: "Reykjavik, Iceland: The capital and largest city of Iceland.", icon: icons.iceland }
     ];
