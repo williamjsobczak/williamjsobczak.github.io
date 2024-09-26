@@ -129,22 +129,30 @@ main {
     margin: 10px 0;
 }
 
-/* Tab button styles */
 .tabs {
+    display: flex;
+    flex-wrap: wrap; /* Allows tabs to wrap onto the next line */
     margin-top: 10px;
+    gap: 10px; /* Adds space between the tabs */
 }
 
 .tab-button {
-    background-color: #f1f1f1;
+    background-color: #e0e0e0;
+    color: #333;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
-    margin-right: 5px;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px; /* Adds space between rows when they stack */
 }
 
+/* Ensures buttons remain aligned and centered */
 .tab-button:hover {
-    background-color: #ddd;
+    background-color: #d4d4d4;
+    color: #000;
 }
 
 .tab-button.active {

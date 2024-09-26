@@ -51,113 +51,597 @@ document.addEventListener('DOMContentLoaded', function() {
             lat: 29.647423, 
             lng: -82.353277, 
             info: `
-                <div class="location-content">
-                    <h3>University of Florida<br><small><span style="font-weight: normal;">Gainesville, Florida</span></small></h3>
-                    <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image">
-                    <p>Pursuing my dual Bachelor's of Science degrees in<br>
-                    <b>Environmental Engineering</b> and <br>
-                    <b>Computer & Information Sciences</b></p>
-
-                    <!-- Main tabs for UF -->
-                    <div class="tabs">
-                        <button class="tab-button active" onclick="showTab(event, 'gainesville-research')">Research</button>
-                        <button class="tab-button" onclick="showTab(event, 'gainesville-involvement')">Involvement</button>
-                        <button class="tab-button" onclick="showTab(event, 'gainesville-teaching')">Teaching</button>
-                    </div>
-
-                    <!-- Main tab content: Research -->
-                    <div id="gainesville-research" class="tab-content" style="display: block;">
-                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
-                        <span>
-                            <a href="https://www.bowdenlaboratory.com/" target="_blank" style="color: blue; text-decoration: underline;">
-                                Dr. John Bowden Research Laboratory
-                            </a>
-                            <br>
-                            <small><i><span style="font-weight: normal;">Undergraduate Researcher</span></i></small>
-                        </span>
-                        <small style="margin-left: auto; font-weight: normal;">January 2021 - May 2024</small>
-                    </h4>
-
-                        <p>Researched the abundance and distribution of Per- and Polyfluoroalkyl Substances (PFAS) in our environment</p>
-                    <p class="no-margin">What are PFAS?</p>
-                    <ul>
-                        <li>Anthropogenic origin, produced industrially for their amphiphilic properties and chemical & thermal stability.</li>
-                        <li>Known as "forever chemicals" for their persistence and mobility in the environment (bioaccumulates/biomagnifies).</li>
-                        <li>Associated with various toxicological and human health risks.</li>
-                        <li>Found in many consumer products, such as water-repellent clothing, non-stick cookware (Teflon), and food packaging.</li>
-                    </ul>
+<div class="location-content">
+    <h3>University of Florida<br>
+        <small><span style="font-weight: normal;">Gainesville, Florida</span></small>
+    </h3>
+    <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image">
+    <p>Pursuing my dual Bachelor's of Science degrees in<br>
+        <b>Environmental Engineering</b> and <br>
+        <b>Computer & Information Sciences</b><br>
+        <span style="line-height: 1.2;">with a minor in <b>French & Francophone Studies</b></span>
+    </p>
 
 
 
-                        <!-- Nested tabs within Research -->
-                    <div class="nested-tabs">
-                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-research_projects')">Projects</button>
-                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-publications')">Publications</button>
-                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-gallery')">Gallery</button> <!-- New Gallery Tab -->
-                    </div>
+    <!-- Main tabs for UF -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="showTab(event, 'gainesville-research')">Research</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-involvement')">Involvement</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-teaching')">Teaching</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-projects')">Projects</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-work')">Work</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-recognitions')">Recognitions</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-scholarships')">Scholarships</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-certifications')">Skills and Certifications</button>
+        <button class="tab-button" onclick="showTab(event, 'gainesville-coursework')">Coursework</button>
+    </div>
 
-                    <!-- Nested tab content: Projects -->
-                    <div id="gainesville-research_projects" class="nested-tab-content" style="display: block;">
-                        <h4>My Contributions</h4>
-                        <ul>
-                            <li>Collaborated in the UF Creative Campus Project analyzing 2600+ crowdsourced samples from across the state of Florida to isolate PFAS – Per- and Polyfluoroalkyl Substances, or toxic anthropogenic ‘forever chemicals’ resistant to breakdown in environmental systems with toxicological and human health ramifications.</li>
-                            <li>Performed extractions and evaporations of solid and liquid phase samples through HPLC – mass spectrometry, followed by peak integration using Thermo Xcalibur Quan Browser for quantification of 50 PFAS compounds</li>
-                            <li>Optimized data and developed an R script for the classification of reported spills for use in an online interactive map of results</li>
-                            <li>Co-authored a paper on PFAS in pool water samples</li>
-                            <li>Designed and organized an investigation of PFAS in particulates captured by AC filters funded by my acceptance to the Emerging Scholars Program and presented at the Undergraduate Research Symposium</li>
-                        </ul>
-                        <div class="gallery-container">
-                            <div class="gallery-item">
-                                <img src="images/research5.png" alt="Poster presented at Fall Undergraduate Research Synposium (2022)" class="gallery-image">
-                                <p class="gallery-caption">Poster presented at Fall Undergraduate Research Synposium (2022)</p>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Main tab content: Research -->
+    <div id="gainesville-research" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                <a href="https://www.bowdenlaboratory.com/" target="_blank" style="color: blue; text-decoration: underline;">
+                    Dr. John Bowden Research Laboratory
+                </a>
+                <br>
+                <small><i><span style="font-weight: normal;">Undergraduate Researcher</span></i></small>
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">January 2021 - May 2024</small>
+        </h4>
 
-                    <!-- Nested tab content: Publications -->
-                    <div id="gainesville-publications" class="nested-tab-content" style="display: none;">
-                        <ul>
-                            <li>
-                                <a href="http://doi.org/10.1021/acsestwater.4c00272" target="_blank">Statewide Surveillance and Mapping of PFAS in Florida Surface Water, (2024)</a>
-                            </li>
-                            <li>
-                                <a href="http://doi.org/10.1016/j.chemosphere.2023.138307" target="_blank">Up in the air: Polyfluoroalkyl phosphate esters (PAPs) in airborne dust captured by air conditioning (AC) filters, (2023)</a>
-                            </li>
-                            <li>
-                                <a href="https://doi.org/10.1016/j.chemosphere.2022.136765" target="_blank">Swimming with PFAS in public and private pools, (2023)</a>
-                            </li>
-                        </ul>
-                    </div>
+        <p>Researched the abundance and distribution of Per- and Polyfluoroalkyl Substances (PFAS) in our environment</p>
+        <p class="no-margin">What are PFAS?</p>
+        <ul>
+            <li>Anthropogenic origin, produced industrially for their amphiphilic properties and chemical & thermal stability.</li>
+            <li>Known as "forever chemicals" for their persistence and mobility in the environment (bioaccumulates/biomagnifies).</li>
+            <li>Associated with various toxicological and human health risks.</li>
+            <li>Found in many consumer products, such as water-repellent clothing, non-stick cookware (Teflon), and food packaging.</li>
+        </ul>
 
-                    <!-- Nested tab content: Gallery -->
-                    <div id="gainesville-gallery" class="nested-tab-content" style="display: none;">
-                        <h4>Photo Gallery</h4>
-                        <div class="gallery-container">
-                            <div class="gallery-item">
-                                <img src="images/research1.jpeg" alt="Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)" class="gallery-image">
-                                <p class="gallery-caption">Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)</p>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/research2.jpeg" alt="Cutting samples from used commercial HVAC filter (2022)" class="gallery-image">
-                                <p class="gallery-caption">Cutting samples from used commercial HVAC filter (2022)</p>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/research3.jpeg" alt="AC filter project prepared samples (2022)" class="gallery-image">
-                                <p class="gallery-caption">AC filter project prepared samples (2022)</p>
-                            </div>
-                            <div class="gallery-item">
-                                <img src="images/research4.jpeg" alt="HPLC-Mass Spectrometer (2022)" class="gallery-image">
-                                <p class="gallery-caption">HPLC-Mass Spectrometer (2022)</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Nested tabs within Research -->
+        <div class="nested-tabs">
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-research_projects')">Projects</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-publications')">Publications</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-gallery')">Gallery</button>
+        </div>
 
-                    <!-- Main tab content: History -->
-                    <div id="iceland-history" class="tab-content" style="display: none;">
-                        <h4>Historical Facts about Iceland</h4>
-                        <p>Iceland has a rich history of settlement dating back to the Vikings, with Reykjavik being the world's northernmost capital.</p>
-                    </div>
+        <!-- Nested tab content: Projects -->
+        <div id="gainesville-research_projects" class="nested-tab-content" style="display: block;">
+            <h4>My Contributions</h4>
+            <ul>
+                <li>Collaborated in the UF Creative Campus Project analyzing 2600+ crowdsourced samples from across the state of Florida to isolate PFAS – Per- and Polyfluoroalkyl Substances, or toxic anthropogenic ‘forever chemicals’ resistant to breakdown in environmental systems with toxicological and human health ramifications.</li>
+                <li>Performed extractions and evaporations of solid and liquid phase samples through HPLC – mass spectrometry, followed by peak integration using Thermo Xcalibur Quan Browser for quantification of 50 PFAS compounds.</li>
+                <li>Optimized data and developed an R script for the classification of reported spills for use in an online interactive map of results.</li>
+                <li>Co-authored a paper on PFAS in pool water samples.</li>
+                <li>Designed and organized an investigation of PFAS in particulates captured by AC filters funded by my acceptance to the Emerging Scholars Program and presented at the Undergraduate Research Symposium.</li>
+            </ul>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/research5.png" alt="Poster presented at Fall Undergraduate Research Symposium (2022)" class="gallery-image">
+                    <p class="gallery-caption">Poster presented at Fall Undergraduate Research Symposium (2022)</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Nested tab content: Publications -->
+        <div id="gainesville-publications" class="nested-tab-content" style="display: none;">
+            <ul>
+                <li>
+                    <a href="http://doi.org/10.1021/acsestwater.4c00272" target="_blank">Statewide Surveillance and Mapping of PFAS in Florida Surface Water, (2024)</a>
+                </li>
+                <li>
+                    <a href="http://doi.org/10.1016/j.chemosphere.2023.138307" target="_blank">Up in the air: Polyfluoroalkyl phosphate esters (PAPs) in airborne dust captured by air conditioning (AC) filters, (2023)</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.1016/j.chemosphere.2022.136765" target="_blank">Swimming with PFAS in public and private pools, (2023)</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Nested tab content: Gallery -->
+        <div id="gainesville-gallery" class="nested-tab-content" style="display: none;">
+            <h4>Photo Gallery</h4>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/research1.jpeg" alt="Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)" class="gallery-image">
+                    <p class="gallery-caption">Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/research2.jpeg" alt="Cutting samples from used commercial HVAC filter (2022)" class="gallery-image">
+                    <p class="gallery-caption">Cutting samples from used commercial HVAC filter (2022)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/research3.jpeg" alt="AC filter project prepared samples (2022)" class="gallery-image">
+                    <p class="gallery-caption">AC filter project prepared samples (2022)</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/research4.jpeg" alt="HPLC-Mass Spectrometer (2022)" class="gallery-image">
+                    <p class="gallery-caption">HPLC-Mass Spectrometer (2022)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main tab content: Involvement -->
+    <div id="gainesville-involvement" class="tab-content" style="display: none;">
+        <div class="nested-tabs">
+            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-ursp')">URSP</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-ursp_advisory_board')">URSP Advisory Board</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-tbp')">Tau Beta Pi</button>
+        </div>
+
+        <!-- Nested tab content: URSP -->
+        <div id="gainesville-ursp" class="nested-tab-content" style="display: block;">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span><i>2020 Cohort Member</i></span>
+                <small style="font-weight: normal;">August 2020 - Present</small>
+            </h3>
+            <ul>
+                <li>Admitted to invitation-only program offered only to the Top 2% of all first-year students admitted to the University of Florida</li>
+                <li>Obtained fundamental research training, mentorship, networking, and resources through exclusive Research & Creativity, Course-Based Undergraduate Research Experience (CURE), and Fundamentals of Research Integrity courses </li>
+                <li>Awarded a stipend to fund first research project materials and certified in Responsible Conduct of Research (RCR)</li>
+            </ul>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/ursp.jpeg" alt="Touring HiPerGator NVIDIA Supercomputer (2023)" class="gallery-image">
+                    <p class="gallery-caption">Touring HiPerGator NVIDIA Supercomputer (2023)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nested tab content: URSP AB -->
+        <div id="gainesville-ursp_advisory_board" class="nested-tab-content" style="display: block;">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span><i>President (Elected Spring 2022)</i></span>
+                <small style="font-weight: normal;">December 2020 - Present</small>
+            </h3>
+            <ul>
+                <li>Oversaw all operations, execute external directives, and pursue development goals for 1000+ program members </li>
+                <li>Spearheaded initiatives to connect undergraduate students to research opportunities and faculty mentors on campus</li>
+                <li>Mentored first-year students invited/admitted to URSP in navigating their college life and research ambitions each Fall</li>
+            </ul>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/uab.jpeg" alt="URSP Advisory Board (2023)" class="gallery-image">
+                    <p class="gallery-caption">URSP Advisory Board (2023)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nested tab content: TBP -->
+        <div id="gainesville-tbp" class="nested-tab-content" style="display: block;">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span><i>Member, Tau Beta Pi Florida Alpha Chapter</i></span>
+                <small style="font-weight: normal;">Initiated April 2024</small>
+            </h3>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/tbp1.jpeg" alt="TBP FL-A Spring 2024 Initiates" class="gallery-image">
+                    <p class="gallery-caption">TBP FL-A Spring 2024 Initiates</p>
+                </div>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/tbp2.jpeg" alt="Kennedy Space Center Visit (2024)" class="gallery-image">
+                    <p class="gallery-caption">Kennedy Space Center Visit (2024)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+     <!-- Main tab content: Teaching -->
+    <div id="gainesville-teaching" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Teaching Assistantship: Intro to Software Engineering (CEN 3031) 
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">August 2024 - December 2024</small>
+        </h4>
+        <ul>
+            <li>Instruct a 1-hr weekly discussion section, hold office hours, and grade student work</li>
+            <li>Assist students as a Peer Mentor in navigating their semester-long full-stack project </li>
+        </ul>
+    </div>
+
+    <!-- Main tab content: Projects -->
+    <div id="gainesville-projects" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                World.ly (Python, Plotly Dash, Pandas, Oracle SQL) | 
+                <a href="http://www.worldly.live" target="_blank" style="color: #007bff; text-decoration: underline;">www.worldly.live</a>
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">April 2023</small>
+        </h4>
+        <ul>
+            <li>Developed a Dash App featuring a suite of interactive visualizations of pertinent country-stratified metrics over time</li>
+            <li>Adopted an Oracle SQL Auto. Relational Database (260,000 tuples) as backend for the core complex SQL trend queries</li>
+            <li>Deployed the web app for public access on an Oracle VM instance (Linux), assigning a custom DNS (worldly.live)</li>
+        </ul>
+
+
+
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    FREEcycle (React JS, Node JS, Express, PostgreSQL, Tailwind CSS)	
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">April 2024</small>
+        </h4>
+        <ul>
+            <li>Designed a full-stack web app for the local exchange of free goods (donations) between users, winning Best Project Award</li>
+        </ul>
+
+        <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/freecycle.png" alt="Sample page of FREEcycle" class="gallery-image">
+                    <p class="gallery-caption">Sample page of FREEcycle</p>
+                </div>
+        </div>
+
+
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    File Manager (C, Linux Kernel, Android, Ubuntu, FUSE)
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">April 2024</small>
+        </h4>
+        <ul>
+            <li>Built a custom file manager in Reptilian OS to mount a filesystem from a .wad file to an n-ary tree, implemented daemon</li>
+        </ul>
+
+
+
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Memory Manager (C)
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">March 2024</small>
+        </h4>
+        <ul>
+            <li>Coded a data structure to fully manage the allocation and deallocation of memory using alternate assignment algorithms </li>
+        </ul>
+
+
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Minesweeper Clone (C++, Simple and Fast Multimedia Library)
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">April 2022</small>
+        </h4>
+        <ul>
+            <li>Created a fully functional version of the game with random tile generation, input/click recognition, and exit conditions</li>
+            <li>Utilized SFML libraries for texture management, recursion, and encapsulated classes using inheritance and polymorphism</li>
+            <li>Organized board and tile information in classes with inheritance/polymorphism and dynamic array & map data structures</li>
+        </ul>
+
+    </div>
+
+
+    <!-- Main tab content: Work -->
+    <div id="gainesville-work" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Center for Undergraduate Reserach (CUR) Office Assistant
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">January 2022 - May 2023</small>
+        </h4>
+        <ul>
+            <li>Facilitated the logistics of programs in the suite managed by CUR, reporting directly to the Director, Dr. Anne Donnelly</li>
+        </ul>
+    </div>
+
+    <!-- Main tab content: Recognitions -->
+    <div id="gainesville-recognitions" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+        </h4>
+        
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                Presidential Honor Roll (4.00 GPA)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020 - Present</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Dean’s List
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020 - Present</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Phi Kappa Phi Invitation
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2021</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Tau Beta Pi Member
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2024 - Present</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Honors Program
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020 - Present</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                University Research Scholars Program 2020 Cohort
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Research Excellence Program for Undergraduates (REPU)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2022-Present</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Emerging Scholars Program (Center for Undergraduate Research)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2022</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Intro to Software Engineering Best Project Award (FREEcycle)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Certified Peer Mentor (International Mentoring Association)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2022</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Sunshine State Scholar - Collier County
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2019</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Main tab content: Scholarships -->
+    <div id="gainesville-scholarships" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+        </h4>
+        
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                Wheat Scholarship (presented by UF Herbert Wertheim College of Engineering)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">September 2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                J. Fred and Lilly C. Wilkes Endowment (presented by UF Dept of Environmental Engineering Sciences) 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">August 2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Tau Beta Pi Honor Society National Scholarship 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">July 2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Dr. Andrew and Laura Dahlem Scholarship (presented by Ding Darling Wildlife Society) 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">June 2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Learning Without Borders Scholarship (presented by UF International Center) 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">December 2023</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Beyond120 Scholarship (affiliated with UF College of Liberal Arts and Sciences)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">December 2023</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                John & Mittie Collins Engineering Scholarship (presented by UF Herbert Wertheim College of Engineering) 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">August 2023</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Charles Vincent and Heidi Cole McLaughlin Endowment (presented by UF College of Liberal Arts and Sciences)
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">May 2023</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Optimist Club of Naples University Scholarship 
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020-2024</span>
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Florida Bright Futures Academic Scholarship
+                <span style="position: absolute; right: 0; font-size: 0.9em; font-weight: normal; min-width: 60px; text-align: right;">2020 – 2024</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main tab content: Certifications -->
+    <div id="gainesville-certifications" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+            <span>
+                    Professional Certification: IBM Data Science Specialization
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">2022</small>
+        </h4>
+        <ul style="margin-top: 0;">
+            <li>Querying in SQL (ipython-sql) | Relational Database Design | Data Science Tools and Methodology</li>
+            <li>Python: ETL Pipelining, Dashboarding, ML Models (Pandas, NumPy, Matplotlib, Plotly Dash, Scikit-learn)</li>
+        </ul>
+
+        <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Research Certification: Undergraduate Responsible Conduct of Research (RCR) Certification 
+            </span>
+            <small style="margin-left: auto; font-weight: normal;">2021</small>
+
+        </h4>
+            <h4 style="display: flex; justify-content: space-between; align-items: center;">
+            <span>
+                    Misc Technical Skills: C++ | Java | R | Python | SQL | JS | HTML | CSS | Git | VBA | MATLAB | Tableau | PowerBI | AWS RDS & EC2
+            </span>
+        </h4>
+    </div>
+    
+    </div>
+
+
+    <!-- Main tab content: Coursework -->
+    <div id="gainesville-coursework" class="tab-content" style="display: block;">
+        <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+        </h4>
+        <p><b> GPA: 3.99/4.00 </b></p>
+
+        <p><b> Environmental Engineering Courses: </b></p>
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Engineering Cores 1-4 (Air, Water, Ecology, Sustainable Materials Management)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Resource Management (ENV 4601)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Chemistry (EES 3206)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Engineering Design 1 (ENV 4454)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Renewable Energy and Sustainability (EGN 4932)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Hydraulics (CWR 4202)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Analysis (ENV 4041C)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Hydrodynamics (CWR 3201)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Computational Methods in R (ENV 3040C)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Materials (EMA 3010)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Technical Drawing and Visualization (CGN 2328)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Engineering Mechanics: Statics (EGM 2511)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Computational Programming for Engineers in Matlab (COP 2271)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Professional Communication for Engineers (ENC 3246)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Engineering Ethics Seminar (ENV 3930)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Intro to Mass Spectrometric Techniques (VME 4906)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Intro to Water Analysis (VME 4906)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Engineering Design and Society (EGN 2020C)
+            </li>
+        </ul>
+
+        <p><b> Computer Science Courses: </b></p>
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                CS Teaching and Learning (CIS 4715)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Intro to Software Engineering (CEN 3031)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Information and Database Systems 1 (CIS 4301)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Operating Systems (COP 4600)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Enterprise Software Engineering Practices (CIS 4930)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Enterprise Security (CIS 4213)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Data Structures and Algorithms (COP 3530)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Introduction to Computer Organization (CDA 3101)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Applications of Discrete Structures (COT 3100)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Engineering Statistics (STA 3032)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Computational Linear Algebra (MAS 3114)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Programming Fundamentals 2 (COP 3503C)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Programming Fundamentals 1 (COP 3502C)
+            </li>
+        </ul>
+
+        <p><b> French Courses: </b></p>
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                French Conversation and Interaction (FRE 3410)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Composition and Stylistics (FRE 3320)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                French Grammar and Composition (FRE 3300)
+            </li>
+        </ul>
+
+        <p><b> General Courses: </b></p>
+        <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                Wildlife Issues in a Changing World (WIS 2040)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Engineering Ethics and Professionalism (EGS 4034)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Principles of Macroeconomics (ECO 2013)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Theatre Appreciation 1 (THE 2000)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Uncommon Reads: Ditch of Dreams (IDH 2930)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Uncommon Read: Health, Chemicals, and Environment (IDH 2920)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Uncommon Read: When the Rivers Run Dry (IDH 2930)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Physics 2 with Calculus (PHY 2048/L)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Enriched Physics 1 with Calculus (PHY 2060)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Calculus w/ Analytical Geometry III
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Elementary Differential Equations (MAP 2302)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Economics of Resource Use (AEB 2451)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                General Chemistry 2 w/ Lab (CHM 2046/L)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                FUNdamentals of Research Integrity (EDH 3931)
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+</div>
             `,
             icon: icons.gainesville
         },
