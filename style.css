@@ -1,20 +1,19 @@
-/* Global Styling */
-body {
+html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     min-height: 90vh;
-}
-
-html, body {
     height: 100%; /* Make sure the body takes the full height */
     margin: 0; /* Remove default margin */
     padding: 5px; /* Remove default padding */
-    overflow: hidden; /* Prevent scrolling */
     box-sizing: border-box; /* Include padding in the total width/height */
     border-radius: 15px;
+    /* This ensures that scrollbars are always visible */
+    overflow-y: scroll;
+    /* Avoid horizontal overflow caused by elements expanding beyond viewport */
+    overflow-x: hidden;
 }
 
 /* Main Layout */
@@ -73,6 +72,9 @@ main {
     transition: right 0.3s ease; /* Match the JS timeout */
     border-radius: 15px 0 0 15px; /* Rounded corners */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow for a nicer look */
+    overflow-y: scroll; /* Ensure scrollbar is always present */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100vh; /* Adjust height to avoid content overflow */
 }
 
 #sidebar.show {
@@ -201,17 +203,18 @@ main {
     color: #000;
 }
 
-/* Styling for nested tab buttons */
-.nested-tab-button {
-    display: inline-block;
-    background-color: #e8e8e8;
+/* Main Tab and Nested Tab Button Styling */
+.tab-button, .nested-tab-button {
+    background-color: #e0e0e0;
     color: #333;
-    padding: 8px 12px;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
     margin-right: 8px;
-    font-size: 12px;
 }
 
 /* Hover effect for nested tab buttons */
@@ -280,7 +283,7 @@ ul {
 }
 
 .gallery-image:hover {
-    transform: scale(1.02); /* Slight zoom effect on hover */
+    transform: scale(1.01); /* Slight zoom effect on hover */
 }
 
 .gallery-caption {
