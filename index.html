@@ -8,26 +8,20 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <header>
-        <h1>William J. Sobczak</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About Me</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <main>
-        <section id="about">
-            <div id="map-text-container">
-                <div id="map-container">
-                    <div id="map"></div>
-                </div>
-            </div>
+        <!-- Map Section -->
+        <section id="map-container">
+            <div id="map"></div>
         </section>
+
+        <!-- Name and Intro Section -->
+        <section id="right-content">
+            <h1>William J. Sobczak</h1>
+            <p>Hello! My name is Willy. <br> <br>Learn out more about me by clicking on each of the icons on the map. <br> Can you find all 8?</p>
+        </section>
+
+        <!-- Sidebar Section -->
         <section id="sidebar">
             <div id="sidebar-content">
                 <span id="close-sidebar">&times;</span>
@@ -35,12 +29,6 @@
             </div>
         </section>
     </main>
-    
-
-    <footer>
-        <p>&copy; 2024 My Personal Website</p>
-    </footer>
-
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
