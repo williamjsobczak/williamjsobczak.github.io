@@ -52,23 +52,110 @@ document.addEventListener('DOMContentLoaded', function() {
             lng: -82.3248, 
             info: `
                 <div class="location-content">
-                    <h3>Gainesville, Florida</h3>
-                    <p>Beautiful beaches, luxurious lifestyle, and rich culture.</p>
-                    <img src="images/gainesville_beach.jpg" alt="Gainesville Beach" class="location-image">
-                    
+                    <h3>University of Florida<br><small><span style="font-weight: normal;">Gainesville, Florida</span></small></h3>
+                    <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image">
+                    <p>Pursuing my dual Bachelor's of Science degrees in<br>
+                    <b>Environmental Engineering</b> and <br>
+                    <b>Computer & Information Sciences</b></p>
+
+                    <!-- Main tabs for UF -->
                     <div class="tabs">
-                        <button class="tab-button active" onclick="showTab(event, 'gainesville-attractions')">Attractions</button>
-                        <button class="tab-button" onclick="showTab(event, 'gainesville-history')">History</button>
+                        <button class="tab-button active" onclick="showTab(event, 'gainesville-research')">Research</button>
+                        <button class="tab-button" onclick="showTab(event, 'gainesville-involvement')">Involvement</button>
+                        <button class="tab-button" onclick="showTab(event, 'gainesville-teaching')">Teaching</button>
                     </div>
-                    
-                    <div id="gainesville-attractions" class="tab-content" style="display: block;">
-                        <h4>Top Attractions</h4>
-                        <p>Gainesville is known for its vibrant arts scene and natural parks.</p>
+
+                    <!-- Main tab content: Research -->
+                    <div id="gainesville-research" class="tab-content" style="display: block;">
+                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>
+                            <a href="https://www.bowdenlaboratory.com/" target="_blank" style="color: blue; text-decoration: underline;">
+                                Dr. John Bowden Research Laboratory
+                            </a>
+                            <br>
+                            <small><i><span style="font-weight: normal;">Undergraduate Researcher</span></i></small>
+                        </span>
+                        <small style="margin-left: auto; font-weight: normal;">January 2021 - May 2024</small>
+                    </h4>
+
+                        <p>Researched the abundance and distribution of Per- and Polyfluoroalkyl Substances (PFAS) in our environment</p>
+                    <p class="no-margin">What are PFAS?</p>
+                    <ul>
+                        <li>Anthropogenic origin, produced industrially for their amphiphilic properties and chemical & thermal stability.</li>
+                        <li>Known as "forever chemicals" for their persistence and mobility in the environment (bioaccumulates/biomagnifies).</li>
+                        <li>Associated with various toxicological and human health risks.</li>
+                        <li>Found in many consumer products, such as water-repellent clothing, non-stick cookware (Teflon), and food packaging.</li>
+                    </ul>
+
+
+
+                        <!-- Nested tabs within Research -->
+                    <div class="nested-tabs">
+                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-research_projects')">Projects</button>
+                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-publications')">Publications</button>
+                        <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-gallery')">Gallery</button> <!-- New Gallery Tab -->
                     </div>
-                    
-                    <div id="gainesville-history" class="tab-content" style="display: none;">
-                        <h4>Historical Facts</h4>
-                        <p>Gainesville was founded in the 1850s and has a rich history linked to the University of Florida.</p>
+
+                    <!-- Nested tab content: Projects -->
+                    <div id="gainesville-research_projects" class="nested-tab-content" style="display: block;">
+                        <h4>My Contributions</h4>
+                        <ul>
+                            <li>Collaborated in the UF Creative Campus Project analyzing 2600+ crowdsourced samples from across the state of Florida to isolate PFAS – Per- and Polyfluoroalkyl Substances, or toxic anthropogenic ‘forever chemicals’ resistant to breakdown in environmental systems with toxicological and human health ramifications.</li>
+                            <li>Performed extractions and evaporations of solid and liquid phase samples through HPLC – mass spectrometry, followed by peak integration using Thermo Xcalibur Quan Browser for quantification of 50 PFAS compounds</li>
+                            <li>Optimized data and developed an R script for the classification of reported spills for use in an online interactive map of results</li>
+                            <li>Co-authored a paper on PFAS in pool water samples</li>
+                            <li>Designed and organized an investigation of PFAS in particulates captured by AC filters funded by my acceptance to the Emerging Scholars Program and presented at the Undergraduate Research Symposium</li>
+                        </ul>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="images/research5.png" alt="Poster presented at Fall Undergraduate Research Synposium (2022)" class="gallery-image">
+                                <p class="gallery-caption">Poster presented at Fall Undergraduate Research Synposium (2022)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested tab content: Publications -->
+                    <div id="gainesville-publications" class="nested-tab-content" style="display: none;">
+                        <ul>
+                            <li>
+                                <a href="http://doi.org/10.1021/acsestwater.4c00272" target="_blank">Statewide Surveillance and Mapping of PFAS in Florida Surface Water, (2024)</a>
+                            </li>
+                            <li>
+                                <a href="http://doi.org/10.1016/j.chemosphere.2023.138307" target="_blank">Up in the air: Polyfluoroalkyl phosphate esters (PAPs) in airborne dust captured by air conditioning (AC) filters, (2023)</a>
+                            </li>
+                            <li>
+                                <a href="https://doi.org/10.1016/j.chemosphere.2022.136765" target="_blank">Swimming with PFAS in public and private pools, (2023)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Nested tab content: Gallery -->
+                    <div id="gainesville-gallery" class="nested-tab-content" style="display: none;">
+                        <h4>Photo Gallery</h4>
+                        <div class="gallery-container">
+                            <div class="gallery-item">
+                                <img src="images/research1.jpeg" alt="Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)" class="gallery-image">
+                                <p class="gallery-caption">Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/research2.jpeg" alt="Cutting samples from used commercial HVAC filter (2022)" class="gallery-image">
+                                <p class="gallery-caption">Cutting samples from used commercial HVAC filter (2022)</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/research3.jpeg" alt="AC filter project prepared samples (2022)" class="gallery-image">
+                                <p class="gallery-caption">AC filter project prepared samples (2022)</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/research4.jpeg" alt="HPLC-Mass Spectrometer (2022)" class="gallery-image">
+                                <p class="gallery-caption">HPLC-Mass Spectrometer (2022)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main tab content: History -->
+                    <div id="iceland-history" class="tab-content" style="display: none;">
+                        <h4>Historical Facts about Iceland</h4>
+                        <p>Iceland has a rich history of settlement dating back to the Vikings, with Reykjavik being the world's northernmost capital.</p>
                     </div>
                 </div>
             `,
@@ -86,13 +173,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.showTab = function(evt, tabName) {
         var i, tabcontent, tabbuttons;
 
-        // Hide all tab content
+        // Hide all main tab content
         tabcontent = document.getElementsByClassName("tab-content");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none"; // Hide all tab content
         }
 
-        // Remove the "active" class from all tab buttons
+        // Remove the "active" class from all main tab buttons
         tabbuttons = document.getElementsByClassName("tab-button");
         for (i = 0; i < tabbuttons.length; i++) {
             tabbuttons[i].classList.remove("active"); // Remove active class
@@ -101,8 +188,45 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show the current tab and set the clicked button as active
         document.getElementById(tabName).style.display = "block"; // Show the current tab content
         evt.currentTarget.classList.add("active"); // Add active class to the clicked button
-    }
+    };
 
+    // Define the showNestedTab function in the global scope for nested tabs
+    window.showNestedTab = function(evt, nestedTabName) {
+        var i, nestedTabContent, nestedTabButtons;
+
+        // Hide all nested tab content
+        nestedTabContent = document.getElementsByClassName("nested-tab-content");
+        for (i = 0; i < nestedTabContent.length; i++) {
+            nestedTabContent[i].style.display = "none"; // Hide all nested tab content
+        }
+
+        // Remove the "active" class from all nested tab buttons
+        nestedTabButtons = document.getElementsByClassName("nested-tab-button");
+        for (i = 0; i < nestedTabButtons.length; i++) {
+            nestedTabButtons[i].classList.remove("active"); // Remove active class
+        }
+
+        // Show the current nested tab and set the clicked button as active
+        document.getElementById(nestedTabName).style.display = "block"; // Show the current nested tab content
+        evt.currentTarget.classList.add("active"); // Add active class to the clicked button
+    };
+
+
+    function openModal(src, alt) {
+        var modal = document.getElementById("gallery-modal");
+        var modalImg = document.getElementById("modal-img");
+        var captionText = document.getElementById("caption");
+        
+        modal.style.display = "block";
+        modalImg.src = src;
+        captionText.innerHTML = alt;
+    }
+    
+    function closeModal() {
+        var modal = document.getElementById("gallery-modal");
+        modal.style.display = "none";
+    }
+    
     // Function to toggle sidebar
     function toggleSidebar() {
         var sidebar = document.getElementById('sidebar');

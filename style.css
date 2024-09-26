@@ -44,7 +44,7 @@ main {
 }
 
 #map {
-    height: 700px; /* Fixed height */
+    height: 1100px; /* Fixed height */
     width: 49.5%; /* Subtract width of sidebar and padding */
     transition: margin-right 0.3s ease;
     margin-right: 1rem; /* Add margin to the right to separate from sidebar */
@@ -73,10 +73,10 @@ main {
 
 #sidebar {
     position: fixed;
-    top: 215px; /* Adjust to line up with map */
+    top: 200; /* Adjust to line up with map */
     right: -100%; /* Initially hidden */
     width: 49.5%; /* Fixed width */
-    height: 698px; /* Fixed height */
+    height: 1100px; /* Fixed height */
     background-color: #f0f0f0;
     overflow-y: auto;
     transition: right 0.3s ease; /* Match the JS timeout */
@@ -103,7 +103,7 @@ main {
 
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 0.01rem;
     background-color: #333;
     color: white;
 }
@@ -153,4 +153,132 @@ footer {
 /* Display the first tab by default */
 .tab-content:first-child {
     display: block;
+}
+
+/* General tab and nested tab content styling */
+.tab-content, .nested-tab-content {
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth content transition */
+}
+
+/* Styling for active tab and nested tab buttons */
+.tab-button.active, .nested-tab-button.active {
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main tab button styling */
+.tab-button {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hover effect for main tab buttons */
+.tab-button:hover {
+    background-color: #d4d4d4;
+    color: #000;
+}
+
+/* Styling for nested tab buttons */
+.nested-tab-button {
+    display: inline-block;
+    background-color: #e8e8e8;
+    color: #333;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+/* Hover effect for nested tab buttons */
+.nested-tab-button:hover {
+    background-color: #d0d0d0;
+    color: #000;
+}
+
+/* Layout for nested tab buttons */
+.nested-tabs {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+/* Active button and content smoother transition */
+.tab-button.active, .nested-tab-button.active {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive design for tab buttons */
+@media (max-width: 768px) {
+    .tab-button, .nested-tab-button {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nested-tab-button {
+        margin-right: 0;
+    }
+}
+
+
+
+
+.no-margin {
+    margin-bottom: 5px; /* Adjust this value as needed */
+}
+
+ul {
+    margin-top: 0; /* Remove default top margin of the ul */
+}
+
+
+
+
+.gallery-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 80vh; /* Adjust height as needed */
+}
+
+.gallery-item {
+    margin-bottom: 20px; /* Space between gallery items */
+}
+
+.gallery-image {
+    width: 100%; /* Make images take full width of container */
+    height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ddd; /* Optional border around images */
+    border-radius: 5px; /* Optional rounding for corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: transform 0.1s; /* Smooth transition */
+}
+
+.gallery-image:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.gallery-caption {
+    text-align: center; /* Center align caption */
+    margin-top: 5px; /* Space above caption */
+    font-size: 14px; /* Adjust font size for caption */
+    color: #555; /* Optional caption color */
 }
