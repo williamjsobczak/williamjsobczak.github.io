@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="location-content">
                     <h3>Naples, Florida</h3>
                     <p>The place that lent me inspiration.</p>
-                    <img src="images/naples1.JPG" alt="Naples Beach" class="location-image",loading="lazy">
+                    <img src="images/naples1.JPG" alt="Naples Beach" class="location-image",link rel="preload">
                     
                     <div class="tabs">
                         <button class="tab-button active" onclick="showTab(event, 'naples-rt')">Red Tide</button>
