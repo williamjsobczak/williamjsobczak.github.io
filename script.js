@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
 <div class="location-content">
     <h3>Gainesville, Florida<br>
-        <small><span style="font-weight: normal;">Gainesville, Florida</span></small>
+        <small><span style="font-weight: normal;">University of Florida</span></small>
     </h3>
     <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image", loading="lazy">
     <p>Pursuing my dual Bachelor's of Science degrees in<br>
