@@ -217,8 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <div id="gainesville-involvement" class="tab-content" style="display: none;">
         <div class="nested-tabs">
             <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-ursp')">URSP</button>
-            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-ursp_advisory_board')">URSP Advisory Board</button>
-            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-tbp')">Tau Beta Pi</button>
+            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-ursp_advisory_board')">URSP Advisory Board</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-tbp')">Tau Beta Pi</button>
         </div>
 
         <!-- Nested tab content: URSP -->
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- Nested tab content: URSP AB -->
-        <div id="gainesville-ursp_advisory_board" class="nested-tab-content" style="display: none;">
+        <div id="gainesville-ursp_advisory_board" class="nested-tab-content" style="display: block;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>President (Elected Spring 2022)</i></span>
                 <small style="font-weight: normal;">December 2020 - Present</small>
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- Nested tab content: TBP -->
-        <div id="gainesville-tbp" class="nested-tab-content" style="display: block;">
+        <div id="gainesville-tbp" class="nested-tab-content" style="display: none;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>Member, Tau Beta Pi Florida Alpha Chapter</i></span>
                 <small style="font-weight: normal;">Initiated April 2024</small>
