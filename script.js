@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="location-content">
                     <h3>Naples, Florida</h3>
                     <p>The place that lent me inspiration.</p>
-                    <img src="images/naples1.JPG" alt="Naples Beach" class="location-image">
+                    <img src="images/naples1.JPG" alt="Naples Beach" class="location-image",loading="lazy">
                     
                     <div class="tabs">
                         <button class="tab-button active" onclick="showTab(event, 'naples-rt')">Red Tide</button>
@@ -41,14 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     <div class="gallery-container">
                         <div class="gallery-item">
-                            <img src="images/naples2.png" alt="Red Tide Notice at Naples Beach" class="gallery-image">
+                            <img src="images/naples2.png" alt="Red Tide Notice at Naples Beach" class="gallery-image", loading="lazy">
                             <p class="gallery-caption">Red Tide Notice at Naples Beach</p>
                         </div>
                     </div>
 
                     <div class="gallery-container">
                         <div class="gallery-item">
-                            <img src="images/naples3.png" alt="Red Tide Conditions: Dark water, fish kills, lobster forced into shallow water for oxygen" class="gallery-image">
+                            <img src="images/naples3.png" alt="Red Tide Conditions: Dark water, fish kills, lobster forced into shallow water for oxygen" class="gallery-image", loading="lazy">
                             <p class="gallery-caption">Red Tide Conditions: Dark water, fish kills, lobster forced into shallow water for oxygen</p>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <h3>Gainesville, Florida<br>
         <small><span style="font-weight: normal;">Gainesville, Florida</span></small>
     </h3>
-    <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image">
+    <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image", loading="lazy">
     <p>Pursuing my dual Bachelor's of Science degrees in<br>
         <b>Environmental Engineering</b> and <br>
         <b>Computer & Information Sciences</b><br>
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/research5.png" alt="Poster presented at Fall Undergraduate Research Symposium (2022)" class="gallery-image">
+                    <img src="images/research5.png" alt="Poster presented at Fall Undergraduate Research Symposium (2022)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Poster presented at Fall Undergraduate Research Symposium (2022)</p>
                 </div>
             </div>
@@ -194,19 +194,19 @@ document.addEventListener('DOMContentLoaded', function() {
             <h4>Photo Gallery</h4>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/research1.jpeg" alt="Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)" class="gallery-image">
+                    <img src="images/research1.jpeg" alt="Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Sampling surface water for Creative Campus Project at Clam Pass Park, a mangrove estuary (2020)</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/research2.jpeg" alt="Cutting samples from used commercial HVAC filter (2022)" class="gallery-image">
+                    <img src="images/research2.jpeg" alt="Cutting samples from used commercial HVAC filter (2022)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Cutting samples from used commercial HVAC filter (2022)</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/research3.jpeg" alt="AC filter project prepared samples (2022)" class="gallery-image">
+                    <img src="images/research3.jpeg" alt="AC filter project prepared samples (2022)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">AC filter project prepared samples (2022)</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/research4.jpeg" alt="HPLC-Mass Spectrometer (2022)" class="gallery-image">
+                    <img src="images/research4.jpeg" alt="HPLC-Mass Spectrometer (2022)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">HPLC-Mass Spectrometer (2022)</p>
                 </div>
             </div>
@@ -216,13 +216,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Main tab content: Involvement -->
     <div id="gainesville-involvement" class="tab-content" style="display: none;">
         <div class="nested-tabs">
-            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-ursp')">URSP</button>
+            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-ursp')">URSP</button>
             <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-ursp_advisory_board')">URSP Advisory Board</button>
-            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-tbp')">Tau Beta Pi</button>
+            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-tbp')">Tau Beta Pi</button>
         </div>
 
         <!-- Nested tab content: URSP -->
-        <div id="gainesville-ursp" class="nested-tab-content" style="display: block;">
+        <div id="gainesville-ursp" class="nested-tab-content" style="display: none;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>2020 Cohort Member</i></span>
                 <small style="font-weight: normal;">August 2020 - Present</small>
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/ursp.jpeg" alt="Touring HiPerGator NVIDIA Supercomputer (2023)" class="gallery-image">
+                    <img src="images/ursp.jpeg" alt="Touring HiPerGator NVIDIA Supercomputer (2023)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Touring HiPerGator NVIDIA Supercomputer (2023)</p>
                 </div>
             </div>
@@ -255,14 +255,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/uab.jpeg" alt="URSP Advisory Board (2023)" class="gallery-image">
+                    <img src="images/uab.jpeg" alt="URSP Advisory Board (2023)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">URSP Advisory Board (2023)</p>
                 </div>
             </div>
         </div>
 
         <!-- Nested tab content: TBP -->
-        <div id="gainesville-tbp" class="nested-tab-content" style="display: none;">
+        <div id="gainesville-tbp" class="nested-tab-content" style="display: block;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>Member, Tau Beta Pi Florida Alpha Chapter</i></span>
                 <small style="font-weight: normal;">Initiated April 2024</small>
@@ -270,13 +270,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/tbp1.jpeg" alt="TBP FL-A Spring 2024 Initiates" class="gallery-image">
+                    <img src="images/tbp1.jpeg" alt="TBP FL-A Spring 2024 Initiates" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">TBP FL-A Spring 2024 Initiates</p>
                 </div>
             </div>
             <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/tbp2.jpeg" alt="Kennedy Space Center Visit (2024)" class="gallery-image">
+                    <img src="images/tbp2.jpeg" alt="Kennedy Space Center Visit (2024)" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Kennedy Space Center Visit (2024)</p>
                 </div>
             </div>
@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="gallery-container">
                 <div class="gallery-item">
-                    <img src="images/freecycle.png" alt="Sample page of FREEcycle" class="gallery-image">
+                    <img src="images/freecycle.png" alt="Sample page of FREEcycle" class="gallery-image", loading="lazy">
                     <p class="gallery-caption">Sample page of FREEcycle</p>
                 </div>
         </div>
@@ -695,7 +695,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Tallahassee, Florida</h3>
-                <img src="images/fdep.png" alt="FDEP" class="location-image">
+                <img src="images/fdep.png" alt="FDEP" class="location-image", loading="lazy">
                 <br>
                 <i style="display: inline;">
                     Intern, Division of Water Resource Management, MS4/NPDES Stormwater Program
@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/fdep.jpg" alt="Inside FDEP Headquarters (Twin Towers) Office" class="gallery-image">
+                        <img src="images/fdep.jpg" alt="Inside FDEP Headquarters (Twin Towers) Office" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Inside FDEP Headquarters (Twin Towers) Office</p>
                     </div>
                 </div>
@@ -730,7 +730,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Ann Arbor, Michigan</h3>
-                <img src="images/epa1.jpeg" alt="NVFEL" class="location-image">
+                <img src="images/epa1.jpeg" alt="NVFEL" class="location-image", loading="lazy">
                 <br>
                 <i style="display: inline;">
                     Pathways Intern, Office of Transportation and Air Quality (OTAQ)
@@ -754,7 +754,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/epa2.jpg" alt="Team Photo (2023)" class="gallery-image">
+                        <img src="images/epa2.jpg" alt="Team Photo (2023)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Team Photo (2023)</p>
                     </div>
                 </div>
@@ -762,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/epa3.png" alt="Sample AIS Classification results using LA/Long Beach Dataset" class="gallery-image">
+                        <img src="images/epa3.png" alt="Sample AIS Classification results using LA/Long Beach Dataset" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Sample AIS Classification results using LA/Long Beach Dataset</p>
                     </div>
                 </div>
@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Reno, Nevada</h3>
-                <img src="images/reno1.jpg" alt="Giga Nevada" class="location-image">
+                <img src="images/reno1.jpg" alt="Giga Nevada" class="location-image", loading="lazy">
                 <br>
                 <i style="display: inline;">
                     Intern, Global Environment, Health, Safety & Security
@@ -797,15 +797,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/reno2.jpeg" alt="Inside Gigafactory 1 (Sparks, Nevada)" class="gallery-image">
+                        <img src="images/reno2.jpeg" alt="Inside Gigafactory 1 (Sparks, Nevada)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Inside Gigafactory 1 (Sparks, Nevada)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/reno3.jpg" alt="Intern Cohort" class="gallery-image">
+                        <img src="images/reno3.jpg" alt="Intern Cohort" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Intern Cohort</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/reno4.jpeg" alt="Cybertruck (Pre-Launch)" class="gallery-image">
+                        <img src="images/reno4.jpeg" alt="Cybertruck (Pre-Launch)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Cybertruck (Pre-Launch)</p>
                     </div>
                 </div>
@@ -820,7 +820,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Fremont, California</h3>
-                <img src="images/fremont1.jpg" alt="Fremont Factory" class="location-image">
+                <img src="images/fremont1.jpg" alt="Fremont Factory" class="location-image", loading="lazy">
                 <br>
                 <i style="display: inline;">
                     Data Engineering Intern
@@ -844,11 +844,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/fremont2.jpeg" alt="Outside Tesla Fremont Factory (2024)" class="gallery-image">
+                        <img src="images/fremont2.jpeg" alt="Outside Tesla Fremont Factory (2024)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Outside Tesla Fremont Factory (2024)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/fremont3.jpeg" alt="Pointing at Fremont Factory from Mission Peak (2024)" class="gallery-image">
+                        <img src="images/fremont3.jpeg" alt="Pointing at Fremont Factory from Mission Peak (2024)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Pointing at Fremont Factory from Mission Peak (2024)</p>
                     </div>
                 </div>
@@ -863,7 +863,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Reykjavík, Iceland</h3>
-                <img src="images/iceland1.png" alt="UFIC" class="location-image">
+                <img src="images/iceland1.png" alt="UFIC" class="location-image", loading="lazy">
                 <br>
 
                 UF In Iceland Study Abroad: Sustainability and Renewable Energy
@@ -885,31 +885,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/iceland2.jpg" alt="UF Group inside ON Geothermal Facility" class="gallery-image">
+                        <img src="images/iceland2.jpg" alt="UF Group inside ON Geothermal Facility" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">UF Group inside ON Geothermal Facility</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland3.jpg" alt="UF Group at Ocean Cluster" class="gallery-image">
+                        <img src="images/iceland3.jpg" alt="UF Group at Ocean Cluster" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">UF Group at Ocean Cluster</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland4.jpg" alt="UF Group at Icelandic Althing, the Oldest Parliament in the World" class="gallery-image">
+                        <img src="images/iceland4.jpg" alt="UF Group at Icelandic Althing, the Oldest Parliament in the World" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">UF Group at Icelandic Althing, the Oldest Parliament in the World</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland5.jpg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image">
+                        <img src="images/iceland5.jpg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland6.jpeg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image">
+                        <img src="images/iceland6.jpeg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland8.jpeg" alt="CO2 and Perlan Museum Observatory" class="gallery-image">
+                        <img src="images/iceland8.jpeg" alt="CO2 and Perlan Museum Observatory" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Perlan Museum Observatory (Reykjavík)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland7.jpeg" alt="Discovered Skyr (Icelandic for Yogurt)" class="gallery-image">
+                        <img src="images/iceland7.jpeg" alt="Discovered Skyr (Icelandic for Yogurt)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Discovered Skyr (Icelandic for Yogurt)</p>
                     </div>
                 </div>
@@ -924,7 +924,7 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
             <div class="location-content">
                 <h3>Lontzen, Belgium</h3>
-                <img src="images/bel1.png" alt="Belgium/US Flags" class="location-image">
+                <img src="images/bel1.png" alt="Belgium/US Flags" class="location-image", loading="lazy">
                 <br>
                 <i style="display: inline;">
                     Bilingual English-French | Dual Citizenship (United States & Belgium)
@@ -947,15 +947,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/bel2.png" alt="Classic Belgian Frites Stand (2011)" class="gallery-image">
+                        <img src="images/bel2.png" alt="Classic Belgian Frites Stand (2011)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Classic Belgian Frites Stand (2011)</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/bel3.JPG" alt="My brother and I at "Mini Europe" (2017) in Brussels, Atomium in Background" class="gallery-image">
+                        <img src="images/bel3.JPG" alt="My brother and I at "Mini Europe" (2017) in Brussels, Atomium in Background" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">My brother and I at "Mini Europe" (2017) in Brussels, Atomium in Background</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/bel4.JPG" alt="(Electric) Train at Gare de Liège-Guillemins (2011)" class="gallery-image">
+                        <img src="images/bel4.JPG" alt="(Electric) Train at Gare de Liège-Guillemins (2011)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">(Electric) Train at Gare de Liège-Guillemins (2011)</p>
                     </div>
                 </div>
