@@ -124,9 +124,10 @@ main {
 }
 
 .location-image {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space between first image and text */
 }
 
 .tabs {
@@ -272,22 +273,22 @@ ul {
 
 .gallery-container {
     display: flex;
-    flex-direction: column; /* Stack images vertically */
-    overflow-y: auto; /* Allow vertical scrolling */
-    max-height: 80vh; /* Adjust height as needed */
+    justify-content: space-between; /* Ensure images are spaced evenly */
+    flex-wrap: wrap; /* Allow images to wrap if the screen is smaller */
+    gap: 20px; /* Add space between images */
 }
 
+/* Style for each gallery item */
 .gallery-item {
-    margin-bottom: 20px; /* Space between gallery items */
+    flex: 1 1 calc(33.33% - 20px); /* 3 images per row, subtract gap */
+    box-sizing: border-box;
 }
 
 .gallery-image {
-    width: 100%; /* Make images take full width of container */
+    width: 100%;
     height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ddd; /* Optional border around images */
-    border-radius: 5px; /* Optional rounding for corners */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    transition: transform 0.1s; /* Smooth transition */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .gallery-image:hover {

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             lng: -82.353277, 
             info: `
 <div class="location-content">
-    <h3>University of Florida<br>
+    <h3>Gainesville, Florida<br>
         <small><span style="font-weight: normal;">Gainesville, Florida</span></small>
     </h3>
     <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image">
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Nested tabs within Research -->
         <div class="nested-tabs">
-            <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-research_projects')">Projects</button>
+            <button class="nested-tab-button active" onclick="showNestedTab(event, 'gainesville-research_projects')">Projects</button>
             <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-publications')">Publications</button>
             <button class="nested-tab-button" onclick="showNestedTab(event, 'gainesville-gallery')">Gallery</button>
         </div>
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- Nested tab content: URSP AB -->
-        <div id="gainesville-ursp_advisory_board" class="nested-tab-content" style="display: block;">
+        <div id="gainesville-ursp_advisory_board" class="nested-tab-content" style="display: none;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>President (Elected Spring 2022)</i></span>
                 <small style="font-weight: normal;">December 2020 - Present</small>
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         <!-- Nested tab content: TBP -->
-        <div id="gainesville-tbp" class="nested-tab-content" style="display: block;">
+        <div id="gainesville-tbp" class="nested-tab-content" style="display: none;">
             <h3 style="display: flex; justify-content: space-between; align-items: center;">
                 <span><i>Member, Tau Beta Pi Florida Alpha Chapter</i></span>
                 <small style="font-weight: normal;">Initiated April 2024</small>
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
      <!-- Main tab content: Teaching -->
-    <div id="gainesville-teaching" class="tab-content" style="display: block;">
+    <div id="gainesville-teaching" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center;">
             <span>
                     Teaching Assistantship: Intro to Software Engineering (CEN 3031) 
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <!-- Main tab content: Projects -->
-    <div id="gainesville-projects" class="tab-content" style="display: block;">
+    <div id="gainesville-projects" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center;">
             <span>
                 World.ly (Python, Plotly Dash, Pandas, Oracle SQL) | 
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!-- Main tab content: Work -->
-    <div id="gainesville-work" class="tab-content" style="display: block;">
+    <div id="gainesville-work" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center;">
             <span>
                     Center for Undergraduate Reserach (CUR) Office Assistant
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <!-- Main tab content: Recognitions -->
-    <div id="gainesville-recognitions" class="tab-content" style="display: block;">
+    <div id="gainesville-recognitions" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
         </h4>
         
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!-- Main tab content: Scholarships -->
-    <div id="gainesville-scholarships" class="tab-content" style="display: block;">
+    <div id="gainesville-scholarships" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
         </h4>
         
@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <!-- Main tab content: Certifications -->
-    <div id="gainesville-certifications" class="tab-content" style="display: block;">
+    <div id="gainesville-certifications" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
             <span>
                     Professional Certification: IBM Data Science Specialization
@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!-- Main tab content: Coursework -->
-    <div id="gainesville-coursework" class="tab-content" style="display: block;">
+    <div id="gainesville-coursework" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
         </h4>
         <p><b> GPA: 3.99/4.00 </b></p>
@@ -635,22 +635,240 @@ document.addEventListener('DOMContentLoaded', function() {
             </li>
         </ul>
     </div>
-
-
-
-
-
-
 </div>
             `,
             icon: icons.gainesville
         },
-        { lat: 30.477069, lng: -84.358069, info: "Tallahassee, Florida: The capital city of Florida.", icon: icons.tallahassee },
-        { lat: 42.3040104, lng: -83.7111609, info: "Ann Arbor, Michigan: Known for its vibrant arts scene and the University of Michigan.", icon: icons.ann_arbor },
-        { lat: 39.5411663, lng: -119.4391124, info: "Reno, Nevada: The Biggest Little City in the World.", icon: icons.reno },
-        { lat: 37.4940265, lng: -121.9452050, info: "Fremont, California: A city in the San Francisco Bay Area.", icon: icons.fremont },
-        { lat: 50.6306, lng: 6.0348, info: "Eupen, Belgium: A beautiful town in the German-speaking part of Belgium.", icon: icons.eupen },
-        { lat: 64.1355, lng: -21.8954, info: "Reykjavik, Iceland: The capital and largest city of Iceland.", icon: icons.iceland }
+        {
+            lat: 30.477069, 
+            lng: -84.358069, 
+            info: `
+            <div class="location-content">
+                <h3>Tallahassee, Florida</h3>
+                <img src="images/fdep.png" alt="FDEP" class="location-image">
+                <br>
+                <i style="display: inline;">
+                    Intern, Division of Water Resource Management, MS4/NPDES Stormwater Program
+                    <span style="float: right; font-style: italic;">July 2022 - August 2022</span>
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li style="position: relative; padding-right: 80px;">
+                        Developed an outreach initiative to elucidate Best Management Practices (BMPs) with emphasis on the amelioration of broader Florida water quality issues (e.g., nutrient pollution) towards permittees (i.e., officials of municipalities operating a Municipal Separate Storm Sewer System) of the National Pollutant Discharge Elimination System
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Enhanced the front-end of a Microsoft Access Database using Visual Basic (VBA) to streamline ease of use for MS4 Coordinators through an Audit Report reminder function featuring an all-inclusive master list for the Environmental Manager
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Pitched a proposal for a central database development plan in comparing options utilizing SQL and Power BI
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/fdep.jpg" alt="Inside FDEP Headquarters (Twin Towers) Office" class="gallery-image">
+                        <p class="gallery-caption">Inside FDEP Headquarters (Twin Towers) Office</p>
+                    </div>
+                </div>
+            </div>
+            `,
+            icon: icons.tallahassee
+        },
+        {
+            lat: 42.3040104, 
+            lng: -83.7111609, 
+            info: `
+            <div class="location-content">
+                <h3>Ann Arbor, Michigan</h3>
+                <img src="images/epa1.jpeg" alt="NVFEL" class="location-image">
+                <br>
+                <i style="display: inline;">
+                    Pathways Intern, Office of Transportation and Air Quality (OTAQ)
+                    <span style="float: right; font-style: italic;">June 2023 - May 2024</span> 
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li style="position: relative; padding-right: 80px;">
+                        Formulated a methodology in R for the classification of marine vessel activity using Automatic Identification System data and unsupervised machine learning techniques to enhance regulation-informing emissions inventory models
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Captured activity patterns 30% more accurately than the existing method, enabling more defensible emissions estimates 
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Presented results to the greater organization and professionals in other federal agencies (i.e., USDOT Volpe Center)
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Drafted manuscript for publication of methodology to academic journal (submitting to Transportation Research Part B)
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/epa2.jpg" alt="Team Photo (2023)" class="gallery-image">
+                        <p class="gallery-caption">Team Photo (2023)</p>
+                    </div>
+                </div>
+
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/epa3.png" alt="Sample AIS Classification results using LA/Long Beach Dataset" class="gallery-image">
+                        <p class="gallery-caption">Sample AIS Classification results using LA/Long Beach Dataset</p>
+                    </div>
+                </div>
+            </div>
+            `,
+            icon: icons.ann_arbor
+        },
+        {
+            lat: 39.5411663, 
+            lng: -119.4391124, 
+            info: `
+            <div class="location-content">
+                <h3>Reno, Nevada</h3>
+                <img src="images/reno1.jpg" alt="Giga Nevada" class="location-image">
+                <br>
+                <i style="display: inline;">
+                    Intern, Global Environment, Health, Safety & Security
+                    <span style="float: right; font-style: italic;">August 2023 - January 2024</span> 
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li>
+                        Crafted custom PowerBI dashboards based on stakeholder specifications to inform business decision-making
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Project managed the creation of a standardized job profile data repository as input for a tool (portable script) to streamline return to work accommodations, projected to save the energy business upwards of $1,000,000 per year
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Automated content conveyance with Power Automate to integrate Teams, SharePoint, and dynamic weekly emails
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/reno2.jpeg" alt="Inside Gigafactory 1 (Sparks, Nevada)" class="gallery-image">
+                        <p class="gallery-caption">Inside Gigafactory 1 (Sparks, Nevada)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/reno3.jpg" alt="Intern Cohort" class="gallery-image">
+                        <p class="gallery-caption">Intern Cohort</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/reno4.jpeg" alt="Cybertruck (Pre-Launch)" class="gallery-image">
+                        <p class="gallery-caption">Cybertruck (Pre-Launch)</p>
+                    </div>
+                </div>
+            </div>
+
+            `,
+            icon: icons.reno
+        },
+        {
+            lat: 37.4940265, 
+            lng: -121.9452050, 
+            info: `
+            <div class="location-content">
+                <h3>Fremont, California</h3>
+                <img src="images/fremont1.jpg" alt="Fremont Factory" class="location-image">
+                <br>
+                <i style="display: inline;">
+                    Data Engineering Intern
+                    <span style="float: right; font-style: italic;">June 2024 - August 2024</span> 
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li>
+                        Crafted custom PowerBI dashboards to inform critical business decision-making based on stakeholder needs and specifications
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Deprecated and eased complexity of computationally intensive dashboards within the PowerBI Workspace, increasing uptime
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Validated the Airflow (ETL) pipeline from the Sustainability & Environment internal web app to a central MSSQL database
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                    Received the Collaborative Badge from Laurie Shelby (VP) for “hitting the ground running” in support of my team and others
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/fremont2.jpeg" alt="Outside Tesla Fremont Factory (2024)" class="gallery-image">
+                        <p class="gallery-caption">Outside Tesla Fremont Factory (2024)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/fremont3.jpeg" alt="Pointing at Fremont Factory from Mission Peak (2024)" class="gallery-image">
+                        <p class="gallery-caption">Pointing at Fremont Factory from Mission Peak (2024)</p>
+                    </div>
+                </div>
+            </div>
+
+            `,
+            icon: icons.fremont
+        },
+        {
+            lat: 64.1355, 
+            lng: 6.0348, 
+            info: `
+            <div class="location-content">
+                <h3>Reykjavík, Iceland</h3>
+                <img src="images/iceland1.png" alt="UFIC" class="location-image">
+                <br>
+
+                UF In Iceland Study Abroad: Sustainability and Renewable Energy
+                <i style="display: inline;">
+                    <span style="float: right; font-style: italic;">May 2024</span> 
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li>
+                        Explored the engineering and public policy surrounding renewable energy adoption (hydro & geothermal)
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Toured an ON geothermal power plant and on-site carbon & hydrogen sulfide deep well injection (CarbFix)
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Attended lectures at Orkustofun (Nat Energy Authority), Iceland University, Reykjavík University, GEORG, and Ocean Cluster	
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/iceland2.jpg" alt="UF Group inside ON Geothermal Facility" class="gallery-image">
+                        <p class="gallery-caption">UF Group inside ON Geothermal Facility</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland3.jpg" alt="UF Group at Ocean Cluster" class="gallery-image">
+                        <p class="gallery-caption">UF Group at Ocean Cluster</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland4.jpg" alt="UF Group at Icelandic Althing, the Oldest Parliament in the World" class="gallery-image">
+                        <p class="gallery-caption">UF Group at Icelandic Althing, the Oldest Parliament in the World</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland5.jpg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image">
+                        <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland6.jpeg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image">
+                        <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland8.jpeg" alt="CO2 and Perlan Museum Observatory" class="gallery-image">
+                        <p class="gallery-caption">Perlan Museum Observatory (Reykjavík)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland7.jpeg" alt="Discovered Skyr (Icelandic for Yogurt)" class="gallery-image">
+                        <p class="gallery-caption">Discovered Skyr (Icelandic for Yogurt)</p>
+                    </div>
+                </div>
+            </div>
+
+            `,
+            icon: icons.iceland
+        },
+        { lat: 50.6306, lng: 6.0348, info: "Eupen, Belgium: A beautiful town in the German-speaking part of Belgium.", icon: icons.eupen }
     ];
 
     // Define the showTab function in the global scope
@@ -674,6 +892,7 @@ document.addEventListener('DOMContentLoaded', function() {
         evt.currentTarget.classList.add("active"); // Add active class to the clicked button
     };
 
+    
     // Define the showNestedTab function in the global scope for nested tabs
     window.showNestedTab = function(evt, nestedTabName) {
         var i, nestedTabContent, nestedTabButtons;
