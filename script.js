@@ -754,7 +754,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/epa2.jpg" alt="Team Photo (2023)" class="gallery-image", loading="lazy">
+                        <img src="images/epa2.JPG" alt="Team Photo (2023)" class="gallery-image", loading="lazy">
                         <p class="gallery-caption">Team Photo (2023)</p>
                     </div>
                 </div>
