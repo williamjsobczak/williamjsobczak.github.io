@@ -33,7 +33,7 @@ main {
 
 /* Right Section - For Name and Intro */
 #right-content {
-    width: 52%; /* Takes 40% width */
+    width: 43%; /* Takes 40% width */
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
@@ -65,7 +65,7 @@ main {
     position: fixed;
     top: 200; /* Adjust to line up with map */
     right: -100%; /* Initially hidden */
-    width: 53%; /* Fixed width */
+    width: 45%; /* Fixed width */
     height: 98%; /* Fixed height */
     background-color: #f0f0f0;
     overflow-y: auto;

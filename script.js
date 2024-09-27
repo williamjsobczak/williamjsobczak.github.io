@@ -637,6 +637,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <li style="position: relative; padding-right: 80px;">
                 French Grammar and Composition (FRE 3300)
             </li>
+            <li style="position: relative; padding-right: 80px;">
+                Intro to French Literature 1 (FRW 3100)
+            </li>
         </ul>
 
         <p><b> General Courses: </b></p>
@@ -897,10 +900,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="gallery-caption">UF Group at Icelandic Althing, the Oldest Parliament in the World</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="images/iceland5.jpg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image", ,link rel="preload">
-                        <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
-                    </div>
-                    <div class="gallery-item">
                         <img src="images/iceland6.jpeg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image", ,link rel="preload">
                         <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
                     </div>
@@ -911,6 +910,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="gallery-item">
                         <img src="images/iceland7.jpeg" alt="Discovered Skyr (Icelandic for Yogurt)" class="gallery-image", ,link rel="preload">
                         <p class="gallery-caption">Discovered Skyr (Icelandic for Yogurt)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/iceland5.jpg" alt="CO2 and Hydrogen Sulfide Deep Well Injector" class="gallery-image", ,link rel="preload">
+                        <p class="gallery-caption">CO2 and Hydrogen Sulfide Deep Well Injector</p>
                     </div>
                 </div>
             </div>
@@ -938,7 +941,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         Conversational Proficiency in French
                     </li>
                     <li style="position: relative; padding-right: 80px;">
-                        Visited family in Lontzen most summers prior to COVID
+                        Visited family in Lontzen most summers
                     </li>
                     <li style="position: relative; padding-right: 80px;">
                         French fries, despite the name, were invented in Belgium
