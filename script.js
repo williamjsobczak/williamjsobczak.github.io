@@ -26,23 +26,73 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
                 <div class="location-content">
                     <h3>Naples, Florida</h3>
-                    <p>Beautiful beaches, luxurious lifestyle, and rich culture.</p>
-                    <img src="images/naples_beach.jpg" alt="Naples Beach" class="location-image">
+                    <p>The place that lent me inspiration.</p>
+                    <img src="images/naples1.JPG" alt="Naples Beach" class="location-image">
                     
                     <div class="tabs">
-                        <button class="tab-button active" onclick="showTab(event, 'naples-attractions')">Attractions</button>
-                        <button class="tab-button" onclick="showTab(event, 'naples-history')">History</button>
+                        <button class="tab-button active" onclick="showTab(event, 'naples-rt')">Red Tide</button>
+                        <button class="tab-button" onclick="showTab(event, 'naples-hs')">High School</button>
+                        <button class="tab-button" onclick="showTab(event, 'naples-volunteering')">Volunteering</button>
                     </div>
                     
-                    <div id="naples-attractions" class="tab-content" style="display: block;">
-                        <h4>Top Attractions</h4>
-                        <p>Naples Pier, The Botanical Gardens, and pristine white-sand beaches make this city a top destination.</p>
+                    
+                    <div id="naples-rt" class="tab-content" style="display: block;">
+                        <p>I grew up watching K. Brevis "Red Tide" algal blooms increase in frequency and intensity. It later became the subject of my Laureate presentation designed as a call to action and served as motivation to pursue studies in the environmental realm.</p>
+                    
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/naples2.png" alt="Red Tide Notice at Naples Beach" class="gallery-image">
+                            <p class="gallery-caption">Red Tide Notice at Naples Beach</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/naples3.png" alt="Red Tide Conditions: Dark water, fish kills, lobster forced into shallow water for oxygen" class="gallery-image">
+                            <p class="gallery-caption">Red Tide Conditions: Dark water, fish kills, lobster forced into shallow water for oxygen</p>
+                        </div>
                     </div>
                     
-                    <div id="naples-history" class="tab-content" style="display: none;">
-                        <h4>Historical Facts</h4>
-                        <p>Naples was founded in the late 1880s. It has a rich history of being a resort town and a haven for nature enthusiasts.</p>
+                    
                     </div>
+
+
+                    <div id="naples-hs" class="tab-content" style="display: none;">
+
+
+                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                        Barron Collier High School
+                        <span style="font-style: italic; font-weight: normal;">2016-2020</span>
+                    </h4>
+
+                    <ul>
+                        <li>Model United Nations President</li>
+                        <li>National Ocean Science Bowel President</li>
+                        <li>National Honor Society Vice President</li>
+                        <li>Varsity Scholar Bowl Captain</li>
+                        <li>Varsity Tennis Team </li>
+                        <li>Chamber Orchestra First Stand Violist</li>
+                        <li>National AP Scholar</li>
+                    </ul>
+                    </div>
+
+                    <div id="naples-volunteering" class="tab-content" style="display: none;">
+
+
+                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4 style="display: flex; justify-content: space-between; align-items: center;">
+                        Volunteer Tennis Coach
+                    </h4>
+
+                    <ul>
+                        Hearing a camper ask, “Will Coach Willy be there?” far exceeded the satisfaction of winning any match</li>
+                    </ul>
+                    </div>
+
+                    
+
+
                 </div>
             `,
             icon: icons.naples
