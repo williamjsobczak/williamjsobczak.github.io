@@ -716,7 +716,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="gallery-container">
                     <div class="gallery-item">
-                        <img src="images/fdep.jpg" alt="Inside FDEP Headquarters (Twin Towers) Office" class="gallery-image", ,link rel="preload">
+                        <img src="images/fdep.JPG" alt="Inside FDEP Headquarters (Twin Towers) Office" class="gallery-image", ,link rel="preload">
                         <p class="gallery-caption">Inside FDEP Headquarters (Twin Towers) Office</p>
                     </div>
                 </div>
