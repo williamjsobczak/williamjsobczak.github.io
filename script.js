@@ -809,7 +809,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             lat: 64.1355, 
-            lng: 6.0348, 
+            lng: -21.8954, 
             info: `
             <div class="location-content">
                 <h3>Reykjavík, Iceland</h3>
@@ -868,7 +868,52 @@ document.addEventListener('DOMContentLoaded', function() {
             `,
             icon: icons.iceland
         },
-        { lat: 50.6306, lng: 6.0348, info: "Eupen, Belgium: A beautiful town in the German-speaking part of Belgium.", icon: icons.eupen }
+        {
+            lat: 50.6306, 
+            lng: 6.0348, 
+            info: `
+            <div class="location-content">
+                <h3>Lontzen, Belgium</h3>
+                <img src="images/bel1.png" alt="Belgium/US Flags" class="location-image">
+                <br>
+                <i style="display: inline;">
+                    Bilingual English-French | Dual Citizenship (United States & Belgium)
+                </i>
+                
+                <ul style="margin-top: 0; position: relative;">
+                    <li>
+                        Dual Citizenship (United States & Belgium)
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Conversational Proficiency in French
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        Visited family in Lontzen most summers prior to COVID
+                    </li>
+                    <li style="position: relative; padding-right: 80px;">
+                        French fries, despite the name, were invented in Belgium
+                    </li>
+                </ul>
+
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/bel2.png" alt="Classic Belgian Frites Stand (2011)" class="gallery-image">
+                        <p class="gallery-caption">Classic Belgian Frites Stand (2011)</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/bel3.JPG" alt="My brother and I at "Mini Europe" (2017) in Brussels, Atomium in Background" class="gallery-image">
+                        <p class="gallery-caption">My brother and I at "Mini Europe" (2017) in Brussels, Atomium in Background</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/bel4.JPG" alt="(Electric) Train at Gare de Liège-Guillemins (2011)" class="gallery-image">
+                        <p class="gallery-caption">(Electric) Train at Gare de Liège-Guillemins (2011)</p>
+                    </div>
+                </div>
+            </div>
+
+            `,
+            icon: icons.eupen
+        }
     ];
 
     // Define the showTab function in the global scope
