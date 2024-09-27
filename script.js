@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
         naples: L.icon({ iconUrl: 'icons/naples.png', iconSize: [30, 30], iconAnchor: [10, 10], popupAnchor: [0, -32] }),
         gainesville: L.icon({ iconUrl: 'icons/gainesville.png', iconSize: [60], iconAnchor: [19, 22], popupAnchor: [0, -32] }),
         tallahassee: L.icon({ iconUrl: 'icons/tallahassee.png', iconSize: [60], iconAnchor: [50, 50], popupAnchor: [0, -32] }),
-        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100], iconAnchor: [50, 32], popupAnchor: [0, -32] }),
         reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [50], iconAnchor: [8, 35], popupAnchor: [0, 0] }),
         fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110], iconAnchor: [100, 50], popupAnchor: [0, -32] }),
-        eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+        eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -32] }),
         iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [100, 100], iconAnchor: [100, 40], popupAnchor: [0, -32] })
     };
 
@@ -1037,34 +1037,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300); // Match the transition duration in CSS
     }
 
-    // Set up markers for each location
-    locations.forEach(function(location) {
-        var marker = L.marker([location.lat, location.lng], { icon: location.icon }).addTo(map);
+// Set up markers for each location
+locations.forEach(function(location) {
+    var marker = L.marker([location.lat, location.lng], { icon: location.icon }).addTo(map);
 
-        marker.on('click', function() {
-            toggleSidebar(); // Retract and expand sidebar
+    // Function to calculate the adjusted anchor based on new icon size
+    function adjustAnchor(iconSize) {
+        return [iconSize[0] / 2, iconSize[1] / 2]; // Center the anchor
+    }
 
-            // Remove the expand class from all markers
-            document.querySelectorAll('.leaflet-marker-icon.expand').forEach(function(icon) {
-                icon.classList.remove('expand');
-            });
-
-            // Add the expand class to the clicked marker
-            var icon = marker._icon;
-            if (icon) {
-                icon.classList.add('expand');
-                // Remove the expand class after the animation is complete
-                setTimeout(function() {
-                    icon.classList.remove('expand');
-                }, 600); // Match the animation duration
-            }
-
-            // Delay updating sidebar content to allow retract animation
-            setTimeout(function() {
-                document.getElementById('sidebar-body').innerHTML = location.info;
-            }, 300); // Delay to match the sidebar retract animation
-        });
+    // Hover effect: slightly expand icon on hover
+    marker.on('mouseover', function() {
+        var newSize = [location.icon.options.iconSize[0] * 1.2, location.icon.options.iconSize[1] * 1.2]; // Increase size
+        marker.setIcon(L.icon({
+            iconUrl: location.icon.options.iconUrl,
+            iconSize: newSize,
+        }));
+        marker.setZIndexOffset(1000); // Bring the icon to front by increasing zIndexOffset
     });
+
+    // Mouse out effect: return icon to normal size
+    marker.on('mouseout', function() {
+        marker.setIcon(L.icon({
+            iconUrl: location.icon.options.iconUrl,
+            iconSize: location.icon.options.iconSize, // Reset to original size
+            iconAnchor: location.icon.options.iconAnchor, // Reset to original anchor
+            popupAnchor: location.icon.options.popupAnchor
+        }));
+        marker.setZIndexOffset(0); // Reset zIndexOffset to its original value
+    });
+
+    // On marker click, expand the icon and display information in the sidebar
+    marker.on('click', function() {
+        toggleSidebar(); // Retract and expand sidebar
+
+        // Remove the expand class from all markers
+        document.querySelectorAll('.leaflet-marker-icon.expand').forEach(function(icon) {
+            icon.classList.remove('expand');
+        });
+
+        // Increase size on click
+        var clickedSize = [location.icon.options.iconSize[0] * 2, location.icon.options.iconSize[1] * 2];
+        marker.setIcon(L.icon({
+            iconUrl: location.icon.options.iconUrl,
+            iconSize: clickedSize,
+            iconAnchor: adjustAnchor(clickedSize), // Adjust anchor for the larger size
+            popupAnchor: location.icon.options.popupAnchor
+        }));
+
+        // Delay to revert back to hover size
+        setTimeout(function() {
+            var hoverSize = [location.icon.options.iconSize[0] * 1.2, location.icon.options.iconSize[1] * 1.2]; // Set to hover size
+            marker.setIcon(L.icon({
+                iconUrl: location.icon.options.iconUrl,
+                iconSize: hoverSize,
+                iconAnchor: adjustAnchor(hoverSize), // Adjust anchor for hover size
+                popupAnchor: location.icon.options.popupAnchor
+            }));
+        }, 300); // Time in milliseconds for the click effect
+        
+
+        // Delay updating sidebar content to allow retract animation
+        setTimeout(function() {
+            document.getElementById('sidebar-body').innerHTML = location.info;
+        }, 300); // Delay to match the sidebar retract animation
+    });
+});
+
 
     // Close sidebar button event listener
     document.getElementById('close-sidebar').addEventListener('click', function() {

@@ -347,3 +347,11 @@ ul {
 #contact-info a:hover {
     text-decoration: underline;
 }
+
+.leaflet-marker-icon {
+    transition: transform 0.3s ease; /* Smooth zoom animation */
+}
+
+.leaflet-marker-icon.expand {
+    transform: scale(1.5); /* Example for expansion */
+}
