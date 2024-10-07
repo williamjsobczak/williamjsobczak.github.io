@@ -377,7 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <div id="gainesville-work" class="tab-content" style="display: none;">
         <h4 style="display: flex; justify-content: space-between; align-items: center;">
             <span>
-                    Center for Undergraduate Reserach (CUR) Office Assistant
+                    Center for Undergraduate Reserach (CUR) Student Assistant
             </span>
             <small style="margin-left: auto; font-weight: normal;">January 2022 - May 2023</small>
         </h4>
