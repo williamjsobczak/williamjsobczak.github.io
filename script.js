@@ -528,16 +528,22 @@ document.addEventListener('DOMContentLoaded', function() {
         <p><b> Environmental Engineering Courses: </b></p>
         <ul style="margin-top: 0; position: relative;">
             <li style="position: relative; padding-right: 80px;">
-                Environmental Engineering Cores 1-4 (Air, Water, Ecology, Sustainable Materials Management)
+                Environmental Engineering Cores 1-5 (Air, Water, Ecology, Sustainable Materials Management)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Hydrology (ENV 4545)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Engineering Design 2 (ENV 4893)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Environmental Engineering Design 1 (ENV 4454)
             </li>
             <li style="position: relative; padding-right: 80px;">
                 Environmental Resource Management (ENV 4601)
             </li>
             <li style="position: relative; padding-right: 80px;">
                 Environmental Chemistry (EES 3206)
-            </li>
-            <li style="position: relative; padding-right: 80px;">
-                Environmental Engineering Design 1 (ENV 4454)
             </li>
             <li style="position: relative; padding-right: 80px;">
                 Renewable Energy and Sustainability (EGN 4932)
@@ -585,6 +591,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <p><b> Computer Science Courses: </b></p>
         <ul style="margin-top: 0; position: relative;">
+            <li style="position: relative; padding-right: 80px;">
+                Senior Project (CIS 4914)
+            </li>
+            <li style="position: relative; padding-right: 80px;">
+                Programming Language Concepts (COP 4020)
+            </li>
             <li style="position: relative; padding-right: 80px;">
                 CS Teaching and Learning (CIS 4715)
             </li>
