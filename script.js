@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Define the icons
     var icons = {
-        naples: L.icon({ iconUrl: 'icons/naples.png', iconSize: [30, 30], iconAnchor: [10, 10], popupAnchor: [0, -32] }),
-        gainesville: L.icon({ iconUrl: 'icons/gainesville.png', iconSize: [60], iconAnchor: [19, 22], popupAnchor: [0, -32] }),
-        tallahassee: L.icon({ iconUrl: 'icons/tallahassee.png', iconSize: [60], iconAnchor: [50, 50], popupAnchor: [0, -32] }),
-        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100], iconAnchor: [50, 32], popupAnchor: [0, -32] }),
-        reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [50], iconAnchor: [8, 35], popupAnchor: [0, 0] }),
-        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110], iconAnchor: [100, 50], popupAnchor: [0, 0] }),
-        berkeley: L.icon({ iconUrl: 'icons/berkeley_law.png', iconSize: [150], iconAnchor: [150, 60], popupAnchor: [0, 0] }),
-        eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -32] }),
-        iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [100, 100], iconAnchor: [100, 40], popupAnchor: [0, -32] })
+        naples: L.icon({ iconUrl: 'icons/naples.png', iconSize: [30, 30], iconAnchor: [10, 10], popupAnchor: [0, 0] }),
+        gainesville: L.icon({ iconUrl: 'icons/gainesville.png', iconSize: [60], iconAnchor: [19, 22], popupAnchor: [0, 0] }),
+        tallahassee: L.icon({ iconUrl: 'icons/tallahassee.png', iconSize: [60], iconAnchor: [50, 50], popupAnchor: [0, 0] }),
+        ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100], iconAnchor: [50, 32], popupAnchor: [0, 0] }),
+        reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [50], iconAnchor: [8, 40], popupAnchor: [0, 0] }),
+        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110], iconAnchor: [120, 45], popupAnchor: [0, 0] }),
+        berkeley: L.icon({ iconUrl: 'icons/berkeley_law.png', iconSize: [150], iconAnchor: [165, 65], popupAnchor: [0, 0] }),
+        eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, 0] }),
+        iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [100, 100], iconAnchor: [100, 40], popupAnchor: [0, 0] })
     };
 
     // Define locations
@@ -1069,31 +1069,82 @@ document.addEventListener('DOMContentLoaded', function() {
 locations.forEach(function(location) {
     var marker = L.marker([location.lat, location.lng], { icon: location.icon }).addTo(map);
 
-    // Function to calculate the adjusted anchor based on new icon size
-    function adjustAnchor(iconSize) {
-        return [iconSize[0] / 2, iconSize[1] / 2]; // Center the anchor
-    }
 
-    // Hover effect: slightly expand icon on hover
-    marker.on('mouseover', function() {
-        var newSize = [location.icon.options.iconSize[0] * 1.2, location.icon.options.iconSize[1] * 1.2]; // Increase size
-        marker.setIcon(L.icon({
-            iconUrl: location.icon.options.iconUrl,
-            iconSize: newSize,
-        }));
-        marker.setZIndexOffset(1000); // Bring the icon to front by increasing zIndexOffset
+// Function to scale the anchor proportionally to the new icon size
+function scaleAnchor(originalAnchor, originalSize, newSize) {
+    return [
+        originalAnchor[0] * (newSize[0] / originalSize[0]),
+        originalAnchor[1] * (newSize[1] / originalSize[1])
+    ];
+}
+
+// Hover effect: slightly expand icon on hover
+marker.on('mouseover', function() {
+    var originalSize = location.icon.options.iconSize;
+    var originalAnchor = location.icon.options.iconAnchor;
+    var newSize = [originalSize[0] * 1.2, originalSize[1] * 1.2];
+    var newAnchor = scaleAnchor(originalAnchor, originalSize, newSize);
+
+    marker.setIcon(L.icon({
+        iconUrl: location.icon.options.iconUrl,
+        iconSize: newSize,
+        iconAnchor: newAnchor,
+        popupAnchor: location.icon.options.popupAnchor
+    }));
+    marker.setZIndexOffset(1000);
+});
+
+// Mouse out effect: return icon to normal size
+marker.on('mouseout', function() {
+    marker.setIcon(L.icon({
+        iconUrl: location.icon.options.iconUrl,
+        iconSize: location.icon.options.iconSize,
+        iconAnchor: location.icon.options.iconAnchor,
+        popupAnchor: location.icon.options.popupAnchor
+    }));
+    marker.setZIndexOffset(0);
+});
+
+// On marker click, expand the icon and display information in the sidebar
+marker.on('click', function() {
+    toggleSidebar(); // Retract and expand sidebar
+
+    // Remove the expand class from all markers
+    document.querySelectorAll('.leaflet-marker-icon.expand').forEach(function(icon) {
+        icon.classList.remove('expand');
     });
 
-    // Mouse out effect: return icon to normal size
-    marker.on('mouseout', function() {
+    // Increase size on click
+    var originalSize = location.icon.options.iconSize;
+    var originalAnchor = location.icon.options.iconAnchor;
+    var clickedSize = [originalSize[0] * 1.4, originalSize[1] * 1.4];
+    var clickedAnchor = scaleAnchor(originalAnchor, originalSize, clickedSize);
+
+    marker.setIcon(L.icon({
+        iconUrl: location.icon.options.iconUrl,
+        iconSize: clickedSize,
+        iconAnchor: clickedAnchor,
+        popupAnchor: location.icon.options.popupAnchor
+    }));
+
+    // Delay to revert back to hover size
+    setTimeout(function() {
+        var hoverSize = [originalSize[0], originalSize[1]];
+        var hoverAnchor = scaleAnchor(originalAnchor, originalSize, hoverSize);
         marker.setIcon(L.icon({
             iconUrl: location.icon.options.iconUrl,
-            iconSize: location.icon.options.iconSize, // Reset to original size
-            iconAnchor: location.icon.options.iconAnchor, // Reset to original anchor
+            iconSize: hoverSize,
+            iconAnchor: hoverAnchor,
             popupAnchor: location.icon.options.popupAnchor
         }));
-        marker.setZIndexOffset(0); // Reset zIndexOffset to its original value
-    });
+    }, 200); // Time in milliseconds for the click effect
+
+    // Delay updating sidebar content to allow retract animation
+    setTimeout(function() {
+        document.getElementById('sidebar-body').innerHTML = location.info;
+    }, 300); // Delay to match the sidebar retract animation
+});
+
 
     // On marker click, expand the icon and display information in the sidebar
     marker.on('click', function() {
