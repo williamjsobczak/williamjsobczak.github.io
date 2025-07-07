@@ -13,13 +13,28 @@ document.addEventListener('DOMContentLoaded', function() {
         tallahassee: L.icon({ iconUrl: 'icons/tallahassee.png', iconSize: [60], iconAnchor: [50, 50], popupAnchor: [0, -32] }),
         ann_arbor: L.icon({ iconUrl: 'icons/ann_arbor.png', iconSize: [100], iconAnchor: [50, 32], popupAnchor: [0, -32] }),
         reno: L.icon({ iconUrl: 'icons/reno.png', iconSize: [50], iconAnchor: [8, 35], popupAnchor: [0, 0] }),
-        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110], iconAnchor: [100, 50], popupAnchor: [0, -32] }),
+        fremont: L.icon({ iconUrl: 'icons/fremont.png', iconSize: [110], iconAnchor: [100, 50], popupAnchor: [0, 0] }),
+        berkeley: L.icon({ iconUrl: 'icons/berkeley_law.png', iconSize: [150], iconAnchor: [150, 60], popupAnchor: [0, 0] }),
         eupen: L.icon({ iconUrl: 'icons/eupen.png', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -32] }),
         iceland: L.icon({ iconUrl: 'icons/iceland.png', iconSize: [100, 100], iconAnchor: [100, 40], popupAnchor: [0, -32] })
     };
 
     // Define locations
     var locations = [
+                {
+            lat: 37.8699,
+            lng: -122.2533847,
+            info: `
+                <div class="location-content">
+                    <h3>Berkeley, CA<br>
+                    <small><span style="font-weight: normal;"> 2025-2028<br><b>JD Candidate</b></span></small>
+                </h3>
+                <img src="images/berkeley_law.jpg" alt="Berkeley Law Building" class="location-image", ,link rel="preload">
+                <p> To be continued...</p>
+                </div>
+            `,
+            icon: icons.berkeley
+        },
         {
             lat: 26.142, 
             lng: -81.794, 
@@ -103,10 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
             info: `
 <div class="location-content">
     <h3>Gainesville, Florida<br>
-        <small><span style="font-weight: normal;">University of Florida</span></small>
+        <small><span style="font-weight: normal;">University of Florida <br> 2020-2025</span></small>
     </h3>
     <img src="images/uf_banner.jpeg" alt="University of Florida" class="location-image", ,link rel="preload">
-    <p>Pursuing my dual Bachelor's of Science degrees in<br>
+    <p>
+        Obtained my dual Bachelor's of Science degrees in<br>
         <b>Environmental Engineering</b> and <br>
         <b>Computer & Information Sciences</b><br>
         <span style="line-height: 1.2;">with a minor in <b>French & Francophone Studies</b></span>
