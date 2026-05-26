@@ -360,11 +360,12 @@ ul {
 }
 
 #profile-picture {
-    max-width: 250px; /* Set the maximum width */
+    max-width: 300px; /* Set the maximum width */
     max-height: 250px; /* Set the maximum height */
     border-radius: 50%; /* Make it circular, if desired */
     object-fit: cover; /* Ensure the image scales well */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    max-width: 100%;
 }
 
 
